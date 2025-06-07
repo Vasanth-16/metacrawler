@@ -6,9 +6,9 @@ import webbrowser
 app = Flask(__name__)
 
 
-GOOGLE_API_KEY = "AIzaSyAEltuEUs8rHL1IilDeeEjMtre6WY5Rqm0"
-GOOGLE_CX = "f2024a058c9ba4865"
-BING_API_KEY = "YOUR_BING_API_KEY"
+GOOGLE_API_KEY = "xxxxxxxxxxxxxxx"
+GOOGLE_CX = "xxxxxxxxxxxxx"
+BING_API_KEY = "xxxxxxxxxxxxx"
 
 async def fetch(session, url, headers=None):
     

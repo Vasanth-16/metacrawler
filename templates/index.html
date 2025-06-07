@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meta Crawler</title>
+    <style>
+       input:focus{
+       
+        outline: 2px solid rgb(47, 255, 47);
+        
+       } 
+       .btn:hover{
+        width: 40%;
+        background-color: rgb(47, 255, 47);
+        color: white;
+        border: 3px solid   rgb(47, 255, 47);
+       }
+    </style>
+</head>
+<body style="background-color:#0D1B2A;">
+    <h1 style="display:flex;justify-content: center; color:white;font-family: Arial, Helvetica, sans-serif;">Meta Search</h1>
+    <form method="POST">
+     <div style="display:flex;justify-content: center;">
+        <input style="width: 50%; padding:12px ;border: none;border-radius: 7px;" type="text" name="search_query" placeholder="Enter your search query">
+        <button class="btn" style="margin-left:20px;background-color: rgb(47, 255, 47);color:white ;font-size: 15px; font-weight:700; padding:12px;border-radius: 9px;border: 3px solid rgb(47, 255, 47); width: 10%;" type="submit">Search</button>
+   
+     </div>
+          </form>
+
+    {% if results %}
+    <h2 style="color: white;font-family: Arial, Helvetica, sans-serif;">Search Results:</h2>
+    <ul>
+        {% for result in results %}
+        <li style="color: white;">
+            <a style="color: white;" href="{{ result.link }}" target="_blank">{{ result.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
